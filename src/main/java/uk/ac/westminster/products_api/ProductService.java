@@ -12,8 +12,8 @@ public class ProductService {
     private Long nextId = 1L;
 
     public ProductService() {
-        products.add(new DigitalProduct(nextId++, "Visio", 2.22, "https://downlaod.visio.com", 300));
-        products.add(new PhysicalProduct(nextId++, "Walking Rock", 10.0, 10, "10x3x4"));
+        products.add(new DigitalProduct(nextId++, "Clean Code (E-book)", 29.99, "/downloads/clean-code.pdf", 4.2));
+        products.add(new PhysicalProduct(nextId++,  "27-inch Monitor", 249.99, 5.4, "61cm x 41cm x 18cm"));
     }
 
     public List<Product> getAllProducts() {
