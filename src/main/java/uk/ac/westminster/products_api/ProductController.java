@@ -27,13 +27,17 @@ public class ProductController {
     }
 
     @PostMapping()
-    public Product addProduct(@RequestBody Product product) {
+    public Product addProduct(@RequestBody DigitalProduct product) {
         return productService.addProduct(product);
     }
+    // RequestBody changed from Product to DigitalProduct, done as a temporary fix for making the Product class abstract
 
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
     }
+
+    @GetMapping("/summaries")
+    public List<String> getSummaries() {return productService.getAllSummaries();}
 
 }
