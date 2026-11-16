@@ -1,6 +1,6 @@
 // A PhysicalProduct IS-A Product because it requires all the attributes and methods of the product class
 
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.model;
 
 public class PhysicalProduct extends Product implements Discountable {
     private double weightKg;

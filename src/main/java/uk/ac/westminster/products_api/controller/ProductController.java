@@ -1,15 +1,20 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import uk.ac.westminster.products_api.model.DigitalProduct;
+import uk.ac.westminster.products_api.model.Product;
+import uk.ac.westminster.products_api.service.ProductService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping()
     public List<Product> getAllProducts() {

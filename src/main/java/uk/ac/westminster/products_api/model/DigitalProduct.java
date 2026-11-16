@@ -1,4 +1,4 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.model;
 
 public class DigitalProduct extends Product implements Discountable {
     private String downloadUrl;
